@@ -4,7 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class OnDamagedEvent : UnityEvent<int> { }
+public class OnDamagedEvent : UnityEvent<int>
+{
+
+}
+
+
 
 public class HealthSystem : MonoBehaviour
 {
@@ -18,9 +23,9 @@ public class HealthSystem : MonoBehaviour
 
         onDamaged.Invoke(health);
 
-        if(health < 1)
+        if (health < 1)
         {
-            onDie.Invoke();
+            Destroy(gameObject);
         }
     }
 }
