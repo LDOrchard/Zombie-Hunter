@@ -25,7 +25,7 @@ public class HealthSystem : MonoBehaviour
 
         if (health < 1)
         {
-            Destroy(gameObject);
+            onDie.Invoke();
         }
     }
 }
