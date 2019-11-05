@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Player : MonoBehaviour
 {
     private Animator gunAnim;
 
@@ -11,7 +11,7 @@ public class NewBehaviourScript : MonoBehaviour
         gunAnim = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(Input.GetMouseButton(0))
         {
